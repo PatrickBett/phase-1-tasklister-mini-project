@@ -24,6 +24,7 @@ function handleTodo(e){
   const inputItem = document.getElementById("new-task-description").value
   if (inputItem===""){
     alert("Enter To-do Item")
+    
   }
   else{
     const unOrderedList = document.getElementById("tasks")
@@ -38,13 +39,15 @@ function handleTodo(e){
 
   
   btnDelete.addEventListener('click',function(e){
-    e.target.parentElement.remove()
+    e.target.parentElement.remove();
+       
     
   })  
 
+
    }
    input.value="";//ensure that no input remains displayed on the input button
-
+   
 
 }
   
@@ -53,7 +56,13 @@ form.addEventListener("submit",handleTodo)
 
 
 
+//To save data to local storage such that when we refresh the browser everything remais
+function saveData(){
+  localStorage.setItem("data",tasks.innerHTML)
+}
 
-
-
+//to display the stored data
+function showData(){
+  tasks.innerHTML=localStorage.getItem("data")
+}
 
