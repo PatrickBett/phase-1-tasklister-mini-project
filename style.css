@@ -35,3 +35,28 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 40px;
+  color: green;
+  font-weight: bold;
+}
+
+ul li button{
+  background-color: orangered;
+  color: white;
+  width: 40px;
+  height: 20px;
+  border-radius: 8px;
+  font-size: medium;
+}
+
+ul li button:hover{
+  background-color: red;
+}
